@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tested</title>
+    <style>
+        body.fade-out {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="page2.html" class="transition-link">Go to Page 2</a>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const links = document.querySelectorAll(".transition-link");
+
+            links.forEach(link => {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const href = this.getAttribute("href");
+                    document.body.classList.add("fade-out");
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 500); // match transition duration
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

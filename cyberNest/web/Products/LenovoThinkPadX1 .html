@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenovo ThinkPad X1</title>
+    <link rel="stylesheet" href="lenvothinkpadx1.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu-bar">
+            <div class="logo">
+                <a href="/cyberNest/web/Homepage/mainpage.html" class="transition-link">CyberNest</a>
+            </div>
+            <div class="item-bar">
+                <a href=""><img src="image/icon_login/search_24dp_UNDEFINED_FILL0_wght400_GRAD0_opsz24.svg"
+                        alt="Search"></a>
+                <a href="products.html" class="transition-link">Product</a>
+                <a href="">About Us</a>
+                <a href="">Contact Us</a>
+            </div>
+            <button class="login-button">
+                <a href="" id="editor">Log in</a>
+                <a href=""><img src="image/icon_login/account_circle_24dp_UNDEFINED_FILL0_wght400_GRAD0_opsz24.svg"></a>
+            </button>
+        </div>
+        <div class="item-container">
+            <div class="back-button">
+                <a href="products.html" class="transition-link">
+                    <span class="arrow">←</span>
+                    Back
+                </a>
+            </div>
+        </div>
+        <div class="image-items">
+            <div class="laptop-img">
+                <a href=""><img src="image/laptop/Lenovo/lenovo thinkpad.png"></a>
+            </div>
+            <div class="detail">
+                <h2>Lenovo ThinkPad X1 Carbon 12th Gen</h2>
+                <p>
+                    - CPU: Up to Intel Core i7-1355U <br>
+                    - RAM: Up to 32GB LPDDR5X<br>
+                    - Storage: Up to 1TB PCIe SSD<br>
+                    - Display: 14" OLED, 2.8K<br>
+                    - GPU: Integrated Intel Iris Xe Graphics<br>
+                    - OS: Windows 11 Pro<br>
+                    - Weight: ~1.09 kg<br>
+                    - Color: Black with carbon fiber weave<br>
+                </p>
+                <h3>$1,199.00</h3>
+                <div class="cart-btn">
+                    <a href="#">Add TO Cart</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const links = document.querySelectorAll(".transition-link");
+
+            links.forEach(link => {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const href = this.getAttribute("href");
+                    document.body.classList.add("fade-out");
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 500); // match transition duration
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

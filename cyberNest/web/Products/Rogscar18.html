@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROG STRIX SCAR 18</title>
+    <link rel="stylesheet" href="rogscar18.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu-bar">
+            <div class="logo">
+                <a href="/cyberNest/web/Homepage/mainpage.html" class="transition-link">CyberNest</a>
+            </div>
+            <div class="item-bar">
+                <a href=""><img src="image/icon_login/search_24dp_UNDEFINED_FILL0_wght400_GRAD0_opsz24.svg"
+                        alt="search"></a>
+                <a href="">Products</a>
+                <a href="">About Us</a>
+                <a href="">Contact Us</a>
+            </div>
+            <button class="login-button">
+                <a href="" id="editor">Log In</a>
+                <a href=""><img src="image/icon_login/account_circle_24dp_UNDEFINED_FILL0_wght400_GRAD0_opsz24.svg"
+                        alt="logo ACCOUNT"></a>
+            </button>
+        </div>
+        <div class="item-container">
+            <div class="back-button">
+                <a href="products.html" class="transition-link">
+                    <span class="arrow">←</span>
+                    Back
+                </a>
+            </div>
+
+        </div>
+        <div class="image-items">
+            <div class="laptop-img">
+                <a href=""><img src="image/laptop/asus/Scar 18.png"></a>
+            </div>
+            <div class="detail">
+                <h2>ROG STRIX SCAR 18 2024 G834JYR</h2>
+                <p>
+                    - CPU : Intel® Core™ i9-14900HX Processor <br>
+                    - RAM : 32GB DDR5 5600GHz<br>
+                    - Storage : 2TB M.2 PCIe NVMe SSD<br>
+                    - Screen : 18" QHD+ 2K DCI-P3 100% 240Hz<br>
+                    - VGA 1 : Intel® UHD Graphics<br>
+                    - VGA 2 : NVIDIA GeForce RTX 4090 16GB<br>
+                    - OS : Windows 11 License<br>
+                    - Weight : 3.10Kg | Color Black<br>
+                </p>
+                <h3>$3,799.00</h3>
+                <div class="cart-btn">
+                    <a href="#">Add TO Cart</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const links = document.querySelectorAll(".transition-link");
+
+            links.forEach(link => {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const href = this.getAttribute("href");
+                    document.body.classList.add("fade-out");
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 500); 
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
